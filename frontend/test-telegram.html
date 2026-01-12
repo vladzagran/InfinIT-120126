@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестирование Telegram бота - ИнфинIT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .status {
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .status.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            background: #1d4ed8;
+        }
+        
+        button:disabled {
+            background: #6b7280;
+            cursor: not-allowed;
+        }
+        
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #e5e7eb;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🤖 Тестирование Telegram бота</h1>
+
+        <div class="test-section">
+            <h3>1. Проверка подключения</h3>
+            <button onclick="checkTelegramStatus()">Проверить статус бота</button>
+            <div id="statusResult"></div>
+        </div>
+
+        <div class="test-section">
+            <h3>2. Тестовая отправка сообщения</h3>
+            <button onclick="sendTestMessage()">Отправить тестовое сообщение</button>
+            <div id="testResult"></div>
+        </div>
+
+        <div class="test-section">
+            <h3>3. Тест формы обратной связи</h3>
+            <form id="testForm" onsubmit="submitTestForm(event)">
+                <div style="margin: 10px 0;">
+                    <input type="text" placeholder="Имя" value="Тестовый пользователь" required style="padding: 8px; width: 200px;">
+                </div>
+                <div style="margin: 10px 0;">
+                    <input type="tel" placeholder="Телефон" value="+7 (999) 999-99-99" required style="padding: 8px; width: 200px;">
+                </div>
+                <div style="margin: 10px 0;">
+                    <input type="email" placeholder="Email" value="test@example.com" required style="padding: 8px; width: 200px;">
+                </div>
+                <div style="margin: 10px 0;">
+                    <textarea placeholder="Сообщение" required style="padding: 8px; width: 300px; height: 100px;">Это тестовое сообщение из формы</textarea>
+                </div>
+                <button type="submit">Отправить через форму</button>
+            </form>
+            <div id="formResult"></div>
+        </div>
+
+        <div class="test-section">
+            <h3>Инструкция по настройке</h3>
+            <ol>
+                <li>Создайте бота через @BotFather в Telegram</li>
+                <li>Получите токен бота</li>
+                <li>Добавьте токен в файл .env как TELEGRAM_BOT_TOKEN</li>
+                <li>Найдите свой Chat ID (можно получить через @userinfobot)</li>
+                <li>Добавьте Chat ID в .env как TELEGRAM_CHAT_ID</li>
+                <li>Перезапустите сервер</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        async function checkTelegramStatus() {
+            const resultDiv = document.getElementById('statusResult');
+            resultDiv.innerHTML = '<div class="status info">Проверяем подключение...</div>';
+
+            try {
+                const response = await fetch('/api/telegram-status');
+                const data = await response.json();
+
+                if (data.configured) {
+                    resultDiv.innerHTML = `
+                        <div class="status success">
+                            <strong>✅ Бот подключен успешно!</strong><br>
+                            Имя бота: ${data.botInfo.first_name}<br>
+                            Username: @${data.botInfo.username}<br>
+                            ID: ${data.botInfo.id}
+                        </div>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `
+                        <div class="status error">
+                            <strong>❌ Ошибка подключения:</strong><br>
+                            ${data.message}
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <div class="status error">
+                        <strong>❌ Ошибка запроса:</strong><br>
+                        ${error.message}
+                    </div>
+                `;
+            }
+        }
+
+        async function sendTestMessage() {
+            const resultDiv = document.getElementById('testResult');
+            resultDiv.innerHTML = '<div class="status info">Отправляем тестовое сообщение...</div>';
+
+            try {
+                const response = await fetch('/api/test-telegram', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                });
+                const data = await response.json();
+
+                if (data.success) {
+                    resultDiv.innerHTML = `<div class="status success">✅ ${data.message}</div>`;
+                } else {
+                    resultDiv.innerHTML = `<div class="status error">❌ ${data.message}</div>`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<div class="status error">❌ Ошибка: ${error.message}</div>`;
+            }
+        }
+
+        async function submitTestForm(event) {
+            event.preventDefault();
+            const resultDiv = document.getElementById('formResult');
+            const form = event.target;
+
+            const formData = {
+                name: form.querySelector('input[type="text"]').value,
+                phone: form.querySelector('input[type="tel"]').value,
+                email: form.querySelector('input[type="email"]').value,
+                message: form.querySelector('textarea').value
+            };
+
+            resultDiv.innerHTML = '<div class="status info">Отправляем форму...</div>';
+
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+                const data = await response.json();
+
+                if (data.success) {
+                    resultDiv.innerHTML = `<div class="status success">✅ ${data.message}</div>`;
+                } else {
+                    resultDiv.innerHTML = `<div class="status error">❌ ${data.message}</div>`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<div class="status error">❌ Ошибка: ${error.message}</div>`;
+            }
+        }
+
+        // Автоматически проверяем статус при загрузке страницы
+        window.addEventListener('load', checkTelegramStatus);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши услуги - ИнфинIT</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Фиксированное меню -->
+    <header class="services-header">
+        <div class="container">
+            <div class="services-header-content">
+                <!-- Логотип -->
+                <div class="services-logo">
+                    <a href="/">
+                        <svg class="logo-svg" width="120" height="40" viewBox="0 0 120 40">
+                            <defs>
+                                <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#2563eb" />
+                                    <stop offset="100%" stop-color="#3b82f6" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M10 20 C10 10 20 10 20 20 S30 30 30 20 S40 10 40 20 S50 30 50 20" 
+                                  stroke="url(#logoGradient)" stroke-width="2" fill="none"/>
+                            <text x="60" y="25" font-family="Arial" font-size="12" font-weight="bold" fill="url(#logoGradient)">
+                                ИнФинIT
+                            </text>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Навигация -->
+                <nav class="services-navigation">
+                    <ul class="services-nav-menu">
+                        <li><a href="/" class="services-nav-link">Главная</a></li>
+                        <li><a href="/#services" class="services-nav-link">Услуги</a></li>
+                        <li><a href="/#about" class="services-nav-link">О нас</a></li>
+                        <li><a href="/#reviews" class="services-nav-link">Отзывы</a></li>
+                        <li><a href="/#contact" class="services-nav-link">Контакты</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Кнопка заявки -->
+                <div class="services-cta-header">
+                    <a href="/#contact" class="cta-button-small">
+                        <span>Оставить заявку</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="services-main">
+        <!-- Герой секция -->
+        <section class="services-hero">
+            <div class="container">
+                <div class="services-hero-content">
+                    <h1 class="services-hero-title">Наши услуги</h1>
+                    <p class="services-hero-subtitle">Комплексные IT-решения для развития вашего бизнеса</p>
+                    <div class="services-hero-stats">
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">50+</span>
+                            <span class="hero-stat-label">Услуг</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">10+</span>
+                            <span class="hero-stat-label">Лет опыта</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">500+</span>
+                            <span class="hero-stat-label">Проектов</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция всех услуг -->
+        <section class="all-services-section">
+            <div class="container">
+                <div class="services-categories">
+                    <button class="category-btn active" data-category="all">Все услуги</button>
+                    <button class="category-btn" data-category="development">Разработка</button>
+                    <button class="category-btn" data-category="consulting">Консалтинг</button>
+                    <button class="category-btn" data-category="support">Поддержка</button>
+                    <button class="category-btn" data-category="Accounting">Бухгалтерское сопровождение</button>
+                </div>
+
+                <div class="all-services-grid">
+                    <!-- Разработка -->
+                    <div class="service-category" data-category="development">
+                        <h2 class="category-title">💻 Разработка программного обеспечения</h2>
+                        <div class="services-list">
+                            <!-- Служба 1 -->
+                            <div class="detailed-service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-microchip"></i>
+                                </div>
+                                <div class="service-details">
+                                    <h3 class="service-title">Разработка микросервисной архитектуры</h3>
+                                    <p class="service-description">Создание масштабируемых и отказоустойчивых систем на основе микросервисов</p>
+                                    <ul class="service-features-detailed">
+                                        <li>Проектирование архитектуры</li>
+                                        <li>Разработка отдельных сервисов</li>
+                                        <li>Настройка межсервисного взаимодействия</li>
+                                        <li>Внедрение контейнеризации</li>
+                                        <li>Настройка мониторинга и логирования</li>
+                                    </ul>
+                                    <div class="service-price">
+                                        <span class="price-label">от 150 000 ₽</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Служба 2 -->
+                            <div class="detailed-service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="service-details">
+                                    <h3 class="service-title">Разработка AI-чатботов</h3>
+                                    <p class="service-description">Создание интеллектуальных чат-ботов с искусственным интеллектом для автоматизации коммуникаций</p>
+                                    <ul class="service-features-detailed">
+                                        <li>Интеграция с нейросетями</li>
+                                        <li>Поддержка голосовых команд</li>
+                                        <li>Анализ тональности сообщений</li>
+                                        <li>Мультиязычная поддержка</li>
+                                        <li>Интеграция с CRM системами</li>
+                                    </ul>
+                                    <div class="service-price">
+                                        <span class="price-label">от 80 000 ₽</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Служба 3 -->
+                            <div class="detailed-service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="service-details">
+                                    <h3 class="service-title">Разработка мобильных приложений</h3>
+                                    <p class="service-description">Создание нативных и кроссплатформенных мобильных приложений для iOS и Android</p>
+                                    <ul class="service-features-detailed">
+                                        <li>React Native / Flutter разработка</li>
+                                        <li>Нативные приложения (Swift, Kotlin)</li>
+                                        <li>Интеграция с платежными системами</li>
+                                        <li>Push-уведомления</li>
+                                        <li>Публикация в AppStore/Google Play</li>
+                                    </ul>
+                                    <div class="service-price">
+                                        <span class="price-label">от 120 000 ₽</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Служба 4 -->
+                            <div class="detailed-service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <div class="service-details">
+                                    <h3 class="service-title">Разработка интернет-магазинов</h3>
+                                    <p class="service-description">Создание полнофункциональных e-commerce решений с современным дизайном</p>
+                                    <ul class="service-features-detailed">
+                                        <li>Интеграция с 1С и CRM</li>
+                                        <li>Системы онлайн-оплаты</li>
+                                        <li>Управление складом</li>
+                                        <li>Аналитика продаж</li>
+                                        <li>Мультивалютность</li>
+                                    </ul>
+                                    <div class="service-price">
+                                        <span class="price-label">от 90 000 ₽</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Служба 5 -->
+                            <div class="detailed-service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-cloud"></i>
+                                </div>
+                                <div class="service-details">
+                                    <h3 class="service-title">Облачные решения и миграция</h3>
+                                    <p class="service-description">Перенос инфраструктуры в облако и разработка cloud-native приложений</p>
+                                    <ul class="service-features-detailed">
+                                        <li>Миграция в AWS/Azure/Google Cloud</li>
+                                        <li>Настройка auto-scaling</li>
+                                        <li>Резервное копирование</li>
+                                        <li>Мониторинг производительности</li>
+                                        <li>Оптимизация затрат</li>
+                                    </ul>
+                                    <div class="service-price">
+                                        <span class="price-label">от 100 000 ₽</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Консалтинг -->
+                    <div class="service-category" data-category="consulting">
+                        <h2 class="category-title">📊 IT-Консалтинг и аудит</h2>
+                        <div class="services-list">
+                            <!-- Служба 6 -->
+                            <div class="detailed-service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="service-details">
+                                    <h3 class="service-title">Технический аудит IT-инфраструктуры</h3>
+                                    <p class="service-description">Комплексный анализ и оценка текущего состояния IT-систем предприятия</p>
+                                    <ul class="service-features-detailed">
+                                        <li>Анализ архитектуры систем</li>
+                                        <li>Оценка безопасности</li>
+                                        <li>Анализ производительности</li>
+                                        <li>Рекомендации по оптимизации</li>
+                                        <li>План модернизации</li>
+                                    </ul>
+                                    <div class="service-price">
+                                        <span class="price-label">от 50 000 ₽</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Служба 7 -->
+                            <div class="detailed-service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="service-details">
+                                    <h3 class="service-title">Кибербезопасность и защита данных</h3>
+                                    <p class="service-description">Оценка уязвимостей и разработка стратегии защиты информации</p>
+                                    <ul class="service-features-detailed">
+                                        <li>Пентестинг и аудит безопасности</li>
+                                        <li>Разработка политик безопасности</li>
+                                        <li>Соответствие GDPR/152-ФЗ</li>
+                                        <li>Инцидент-менеджмент</li>
+                                        <li>Обучение сотрудников</li>
+                                    </ul>
+                                    <div class="service-price">
+                                        <span class="price-label">от 75 000 ₽</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Служба 8 -->
+                            <div class="detailed-service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div class="service-details">
+                                    <h3 class="service-title">Консультации по отчетности УМФО</h3>
+                                    <p class="service-description">Профессиональные консультации по ведению управленческой финансовой отчетности</p>
+                                    <ul class="service-features-detailed">
+                                        <li>Настройка учетных систем</li>
+                                        <li>Методология отчетности</li>
+                                        <li>Анализ финансовых показателей</li>
+                                        <li>Автоматизация процессов</li>
+                                        <li>Обучение персонала</li>
+                                    </ul>
+                                    <div class="service-price">
+                                        <span class="price-label">от 40 000 ₽</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Служба 9 -->
+                            <div class="detailed-service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-project-diagram"></i>
+                                </div>
+                                <div class="service-details">
+                                    <h3 class="service-title">Управление IT-проектами</h3>
+                                    <p class="service-description">Внедрение методологий управления проектами и оптимизация процессов</p>
+                                    <ul class="service-features-detailed">
+                                        <li>Внедрение Agile/Scrum</li>
+                                        <li>Настройка JIRA/Confluence</li>
+                                        <li>Управление рисками</li>
+                                        <li>Контроль качества</li>
+                                        <li>Отчетность и метрики</li>
+                                    </ul>
+                                    <div class="service-price">
+                                        <span class="price-label">от 60 000 ₽</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Поддержка -->
+                    <div class="service-category" data-category="support">
+                        <h2 class="category-title">🔧 Техническая поддержка и обслуживание</h2>
+                        <div class="services-list">
+                            <!-- Служба 10 -->
+                            <div class="detailed-service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <div class="service-details">
+                                    <h3 class="service-title">Техническая поддержка 24/7</h3>
+                                    <p class="service-description">Круглосуточная поддержка пользователей и сопровождение систем</p>
+                                    <ul class="service-features-detailed">
+                                        <li>Поддержка по телефону и чату</li>
+                                        <li>Удаленное подключение</li>
+                                        <li>Решение инцидентов 1-3 линии</li>
+                                        <li>Документирование решений</li>
+                                        <li>SLА гарантии</li>
+                                    </ul>
+                                    <div class="service-price">
+                                        <span class="price-label">от 25 000 ₽/мес</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Служба 11 -->
+                            <div class="detailed-service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <div class="service-details">
+                                    <h3 class="service-title">Администрирование серверов</h3>
+                                    <p class="service-description">Полное администрирование и мониторинг серверной инфраструктуры</p>
+                                    <ul class="service-features-detailed">
+                                        <li>Настройка и оптимизация ОС</li>
+                                        <li>Мониторинг производительности</li>
+                                        <li>Резервное копирование</li>
+                                        <li>Обновление и патчинг</li>
+                                        <li>Диагностика неисправностей</li>
+                                    </ul>
+                                    <div class="service-price">
+                                        <span class="price-label">от 35 000 ₽/мес</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Служба 12 -->
+                            <div class="detailed-service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                                <div class="service-details">
+                                    <h3 class="service-title">Обновление и модернизация ПО</h3>
+                                    <p class="service-description">Плановое обновление программного обеспечения и систем</p>
+                                    <ul class="service-features-detailed">
+                                        <li>Планирование обновлений</li>
+                                        <li>Тестирование совместимости</li>
+                                        <li>Миграция данных</li>
+                                        <li>Обучение пользователей</li>
+                                        <li>Пост-обновочная поддержка</li>
+                                    </ul>
+                                    <div class="service-price">
+                                        <span class="price-label">от 45 000 ₽</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Маркетинг -->
+                    <div class="service-category" data-category="Accounting">
+                        <h2 class="category-title">📈 Бухгалтерское сопровождение и аналитика</h2>
+                        <div class="services-list">
+                            <!-- Служба 13 -->
+                            <div class="detailed-service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <div class="service-details">
+                                    <h3 class="service-title">Бухгалтеская консультация и сопровождение</h3>
+                                    <p class="service-description">Комплексное сопровождение</p>
+                                    <ul class="service-features-detailed">
+                                        <li>Ежемесячные бухгалтерские отчеты</li>
+                                        <li>Регистрация Налога на прибыль</li>
+                                        <li>Расчет заработной платы</li>
+                                        <li>Регистрация НДС. Декларирование НДС</li>
+                                        <li>Кадровый учет</li>
+                                        <li>Составление и аудит годовой финансовой отчетности</li>
+                                    </ul>
+                                    <div class="service-price">
+                                        <span class="price-label">По договоренности</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Служба 14 -->
+                            <div class="detailed-service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <div class="service-details">
+                                    <h3 class="service-title">Веб-аналитика и метрики</h3>
+                                    <p class="service-description">Настройка систем аналитики и анализ поведения пользователей</p>
+                                    <ul class="service-features-detailed">
+                                        <li>Настройка Google Analytics</li>
+                                        <li>Внедрение Яндекс.Метрики</li>
+                                        <li>Heatmap и session recording</li>
+                                        <li>A/B тестирование</li>
+                                        <li>Дашборды и отчеты</li>
+                                    </ul>
+                                    <div class="service-price">
+                                        <span class="price-label">от 25 000 ₽</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA секция -->
+        <section class="services-cta-section">
+            <div class="container">
+                <div class="services-cta-content">
+                    <h2 class="cta-title">Готовы начать проект?</h2>
+                    <p class="cta-subtitle">Оставьте заявку и мы подберем оптимальное решение для вашего бизнеса</p>
+                    <a href="/#contact" class="cta-button-large">
+                        <span>Оставить заявку</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="/script/services.js"></script>
+</body>
+
+</html>

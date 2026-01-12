@@ -1,0 +1,376 @@
+/* Стили для страницы услуг */
+
+
+/* Фиксированное меню */
+
+.services-header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+}
+
+.services-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.services-nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.services-nav-link {
+    text-decoration: none;
+    color: #374151;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.services-nav-link:hover {
+    color: #2563eb;
+}
+
+.services-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #2563eb;
+    transition: width 0.3s ease;
+}
+
+.services-nav-link:hover::after {
+    width: 100%;
+}
+
+.cta-button-small {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #2563eb, #3b82f6);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.cta-button-small:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+
+/* Герой секция */
+
+.services-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 180px 0 100px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.services-hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.services-hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.services-hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.hero-stat {
+    text-align: center;
+}
+
+.hero-stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.hero-stat-label {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+
+/* Категории услуг */
+
+.services-categories {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 60px 0 40px;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    padding: 12px 24px;
+    background: #f8fafc;
+    border: 2px solid #e5e7eb;
+    border-radius: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+    background: #e5e7eb;
+}
+
+.category-btn.active {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+
+/* Сетка всех услуг */
+
+.all-services-section {
+    padding: 60px 0;
+}
+
+.service-category {
+    margin-bottom: 60px;
+}
+
+.category-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #1f2937;
+    border-left: 4px solid #2563eb;
+    padding-left: 15px;
+}
+
+.services-list {
+    display: grid;
+    gap: 30px;
+}
+
+.detailed-service-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    gap: 25px;
+    transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.detailed-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #2563eb, #3b82f6);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.service-details {
+    flex: 1;
+}
+
+.service-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #1f2937;
+}
+
+.service-description {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.service-features-detailed {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.service-features-detailed li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 8px;
+    color: #4b5563;
+}
+
+.service-features-detailed li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-weight: bold;
+}
+
+.service-price {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 15px;
+}
+
+.price-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+
+/* CTA секция */
+
+.services-cta-section {
+    background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.cta-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.cta-button-large {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 40px;
+    background: linear-gradient(45deg, #2563eb, #3b82f6);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.cta-button-large:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+}
+
+
+/* Футер */
+
+
+/* Футер (такой же как на главной странице) */
+
+
+/* Стили наследуются из style.css*/
+
+
+/* Адаптивность */
+
+@media (max-width: 968px) {
+    .services-header-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .services-nav-menu {
+        gap: 20px;
+    }
+    .services-hero-title {
+        font-size: 2.5rem;
+    }
+    .services-hero-stats {
+        gap: 30px;
+    }
+    .detailed-service-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .service-icon {
+        align-self: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-nav-menu {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    .services-hero {
+        padding: 150px 0 80px;
+    }
+    .services-hero-title {
+        font-size: 2rem;
+    }
+    .services-hero-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .services-categories {
+        gap: 10px;
+    }
+    .category-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-hero-title {
+        font-size: 1.8rem;
+    }
+    .detailed-service-card {
+        padding: 20px;
+    }
+    .service-title {
+        font-size: 1.2rem;
+    }
+    .cta-title {
+        font-size: 2rem;
+    }
+}

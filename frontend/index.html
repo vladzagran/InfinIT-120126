@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ИнфинIT</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="ИнфинIT - комплексные IT решения для вашего бизнеса. Разработка микросервисов, чат-ботов, консультации по отчетности УМФО.">
+    <meta name="keywords" content="IT услуги, разработка, микросервисы, чат-боты, УМФО, консультации">
+</head>
+
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Логотип -->
+                <div class="logo">
+                    <a href="#">
+                        <svg class="logo-svg desktop-logo" width="120" height="40" viewBox="0 0 120 40">
+                            <defs>
+                                <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#2563eb" />
+                                    <stop offset="100%" stop-color="#3b82f6" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M10 20 C10 10 20 10 20 20 S30 30 30 20 S40 10 40 20 S50 30 50 20" 
+                                  stroke="url(#logoGradient)" stroke-width="2" fill="none"/>
+                            <text x="60" y="25" font-family="Arial" font-size="12" font-weight="bold" fill="url(#logoGradient)">
+                                ИнФинIT
+                            </text>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Навигация -->
+                <nav class="navigation">
+                    <ul class="nav-menu">
+                        <li><a href="#services" class="nav-link" data-section="services">Услуги</a></li>
+                        <li><a href="#about" class="nav-link" data-section="about">О нас</a></li>
+                        <li><a href="#reviews" class="nav-link" data-section="reviews">Отзывы</a></li>
+                        <li><a href="#contact" class="nav-link" data-section="contact">Контакты</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Социальные сети -->
+                <div class="social-media">
+                    <a href="#" class="social-link" aria-label="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="VKontakte">
+                        <i class="fab fa-vk"></i>
+                    </a>
+                </div>
+
+                <!-- Мобильное меню (бургер) -->
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-overlay"></div>
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">
+                    <svg class="logo-svg mobile-logo" width="100" height="30" viewBox="0 0 100 30">
+                        <defs>
+                            <linearGradient id="mobileLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#2563eb"/>
+                                <stop offset="100%" stop-color="#3b82f6"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M10 20 C10 12 18 12 20 20 S28 28 30 20 S38 12 40 20 S48 28 50 20" 
+                              stroke="url(#mobileLogoGradient)" 
+                              stroke-width="2" 
+                              fill="none"/>
+                        <text x="65" y="22" 
+                              font-family="Arial" 
+                              font-size="12" 
+                              font-weight="bold" 
+                              fill="url(#mobileLogoGradient)">
+                            ИнфинIT
+                        </text>
+                    </svg>
+                </div>
+                <button class="mobile-menu-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-menu">
+                    <li>
+                        <a href="#services" class="mobile-nav-link">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>Наши услуги</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" class="mobile-nav-link">
+                            <i class="fas fa-info-circle"></i>
+                            <span>О нас</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="mobile-nav-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>Контакты</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="mobile-social">
+                <p class="mobile-social-title">Мы в соцсетях:</p>
+                <div class="mobile-social-links">
+                    <a href="#" class="mobile-social-link" aria-label="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="#" class="mobile-social-link" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="mobile-social-link" aria-label="VKontakte">
+                        <i class="fab fa-vk"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mobile-contacts">
+                <div class="mobile-contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+7 (999) 123-45-67</span>
+                </div>
+                <!--    <div class="mobile-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>г. Уфа, ул. Финансовая, д. 1</span>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Секция 1: Прайс услуг -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2 class="section-title">Наши услуги</h2>
+                <p class="section-subtitle">Мы предлагаем комплексные решения для вашего бизнеса</p>
+
+                <div class="services-grid">
+                    <!-- Карточка услуги 1 -->
+                    <div class="service-card">
+                        <div class="service-image" data-image="service-1">
+                            <div class="service-overlay"></div>
+
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Бухгалтерская поддержка</h3>
+                            <p class="service-description">Комплексное сопровождение</p>
+                            <ul class="service-features">
+                                <li>Налоговые риски</li>
+                                <li>Проблемы с аудитами</li>
+                                <li>Юридические последствия</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Карточка услуги 2 -->
+                    <div class="service-card">
+                        <div class="service-image" data-image="service-2">
+                            <div class="service-overlay"></div>
+
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Аудит финансовой отчетности</h3>
+                            <p class="service-description">Своевременный аудит - залог стабильной и спокойной работы.</p>
+                            <ul class="service-features">
+                                <li>Консалтинг по всем текущим вопросам</li>
+                                <li>Всесторонняя помощь при возникновении споров или разногласий с контролирующими органами</li>
+                                <li>Проведение семинаров или вебинаров, в том числе по Вашему индивидуальному запросу</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Карточка услуги 3 -->
+                    <div class="service-card">
+                        <div class="service-image" data-image="service-3">
+                            <div class="service-overlay"></div>
+
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Консультация и поддержка</h3>
+                            <p class="service-description">Комплексная консультация</p>
+                            <ul class="service-features">
+                                <li>Новые методики</li>
+                                <li>Анализ ведения учёта</li>
+                                <li>Доступная поддержка</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Карточка услуги 4 -->
+                    <div class="service-card">
+                        <div class="service-image" data-image="service-4">
+                            <div class="service-overlay"></div>
+
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Интеграция и взаимодействие сервисов</h3>
+                            <p class="service-description"></p>
+                            <ul class="service-features">
+                                <li>Меньше ручной работы</li>
+                                <li>Снижение ошибок и дублирования данных</li>
+                                <li>Нестандартная интеграция</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Карточка услуги 5 -->
+                    <div class="service-card">
+                        <div class="service-image" data-image="service-5">
+                            <div class="service-overlay"></div>
+
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Проектирование и разработка микросервисов</h3>
+                            <p class="service-description">Комплексная разработка</p>
+                            <ul class="service-features">
+                                <li>Описание архитектуры проекта</li>
+                                <li>Интеграция</li>
+                                <li>Техническая поддержка</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Карточка услуги 6 -->
+                    <div class="service-card">
+                        <div class="service-image" data-image="service-6">
+                            <div class="service-overlay"></div>
+
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Разработка/Доработка модулей на 1С</h3>
+                            <p class="service-description">Комплексная разработка чат-ботов</p>
+                            <ul class="service-features">
+                                <li>Доработка существующих модулей</li>
+                                <li>Разработка на базе типовой конфигурации</li>
+                                <li>Быстрое принятие решений</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Кнопка "Узнать больше" -->
+                <div class="services-cta">
+                    <a href="/services.html" target="#" class="cta-button">
+                        <span>Узнать больше о наших услугах</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- Секция 2: О нас -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">О нас</h2>
+                        <p class="about-description">
+                            Мы - команда профессионалов, которая уже более 10 лет помогает бизнесу достигать новых высот. Наш опыт и экспертиза позволяют создавать решения, которые действительно работают.
+                        </p>
+                        <p class="about-description">
+                            Мы ценим каждого клиента и подходим индивидуально к каждому проекту. Наша цель - не просто выполнить работу, а помочь вашему бизнесу расти и развиваться.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">Успешных решений</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label">Лет опыта</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">98%</span>
+                                <span class="stat-label">Довольных клиентов</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" loading="lazy" alt="Наша команда">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция 3: Контакты -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Оставить заявку</h2>
+                <p class="section-subtitle">Свяжитесь с нами для обсуждения вашего проекта</p>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Телефон</h4>
+                                <p>+7 (999) 123-45-67</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@infinit.ru</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <input type="text" placeholder="Ваше имя" required>
+                            <input type="tel" placeholder="Ваш номер телефона" required>
+                            <input type="email" placeholder="Ваш email" required>
+                            <textarea placeholder="Напишите свой вопрос" rows="5" required></textarea>
+
+                            <!-- Чекбокс согласия -->
+                            <div class="checkbox-container">
+                                <label class="checkbox-label">
+                            <input type="checkbox" required class="checkbox-input">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-text">
+                                Я согласен на обработку моих персональных данных и принимаю 
+                                <a href="/privacy-policy.html" target="_blank" class="privacy-link">Политику конфиденциальности</a>
+                            </span>
+                        </label>
+                            </div>
+
+                            <button type="submit">Отправить сообщение</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция 4: Отзывы -->
+        <section id="reviews" class="reviews-section">
+            <div class="container">
+                <h2 class="section-title">Отзывы наших клиентов</h2>
+                <p class="section-subtitle">Что говорят о нас те, кто уже воспользовался нашими услугами</p>
+
+                <div class="reviews-container">
+                    <div class="reviews-slider">
+                        <div class="reviews-track">
+                            <!-- Отзыв 1 -->
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" loading="lazy" alt="Алексей Петров" class="review-avatar">
+                                    <div class="review-info">
+                                        <h4 class="review-name">Алексей Петров</h4>
+                                        <p class="review-position">CEO, TechCompany</p>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>"Отличная работа! Команда профессионалов, которые знают свое дело. Веб-сайт был разработан быстро и качественно. Особенно хочу отметить внимательное отношение к деталям."</p>
+                                </div>
+                                <div class="review-rating">
+                                </div>
+                            </div>
+
+                            <!-- Отзыв 2 -->
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" loading="lazy" alt="Мария Иванова" class="review-avatar">
+                                    <div class="review-info">
+                                        <h4 class="review-name">Мария Иванова</h4>
+                                        <p class="review-position">Marketing Director</p>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>"Результат превзошел все ожидания! Маркетинговая стратегия, разработанная специалистами, принесла ощутимые результаты уже в первый месяц. Рост трафика на 45%!"</p>
+                                </div>
+                                <div class="review-rating">
+                                </div>
+                            </div>
+
+                            <!-- Отзыв 3 -->
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" loading="lazy" alt="Дмитрий Сидоров" class="review-avatar">
+                                    <div class="review-info">
+                                        <h4 class="review-name">Дмитрий Сидоров</h4>
+                                        <p class="review-position">Art Director</p>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>"Дизайн просто потрясающий! Учли все наши пожелания и предложили креативные решения. Очень доволен сотрудничеством. Буду рекомендовать!"</p>
+                                </div>
+                                <div class="review-rating">
+
+                                </div>
+                            </div>
+
+                            <!-- Отзыв 4 -->
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" loading="lazy" alt="Сергей Козлов" class="review-avatar">
+                                    <div class="review-info">
+                                        <h4 class="review-name">Сергей Козлов</h4>
+                                        <p class="review-position">Startup Founder</p>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>"Сделали для нас мобильное приложение с нуля. Работали оперативно, всегда были на связи. Техническая поддержка на высшем уровне. Спасибо за профессионализм!"</p>
+                                </div>
+                                <div class="review-rating">
+
+                                </div>
+                            </div>
+
+                            <!-- Отзыв 5 -->
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" loading="lazy" alt="Екатерина Волкова" class="review-avatar">
+                                    <div class="review-info">
+                                        <h4 class="review-name">Екатерина Волкова</h4>
+                                        <p class="review-position">E-commerce Manager</p>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>"Заказали интернет-магазин. Сделали все в срок, функционал полный, дизайн современный. Конверсия выросла на 30% после запуска. Отличная работа команды!"</p>
+                                </div>
+                                <div class="review-rating">
+
+                                </div>
+                            </div>
+
+                            <!-- Отзыв 6 -->
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" loading="lazy" alt="Анна Смирнова" class="review-avatar">
+                                    <div class="review-info">
+                                        <h4 class="review-name">Анна Смирнова</h4>
+                                        <p class="review-position">Brand Manager</p>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>"Разработали комплексный брендбук и айдентику. Профессиональный подход, креативные идеи. Бренд стал узнаваемым. Спасибо за качественную работу!"</p>
+                                </div>
+                                <div class="review-rating">
+                                    <!--         <span class="stars">★★★★★</span>
+                                    <span class="review-date">18.06.2024</span> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="slider-btn prev-btn" aria-label="Предыдущие отзывы">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn next-btn" aria-label="Следующие отзывы">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-- Индикаторы прогресса -->
+                <div class="slider-indicators">
+                    <div class="indicator" data-index="0"></div>
+                    <div class="indicator" data-index="1"></div>
+                    <!--<div class="indicator" data-index="2"></div>-->
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Навигация слева -->
+                <div class="footer-nav">
+                    <ul class="footer-nav-menu">
+                        <li><a href="#services" class="footer-nav-link">Услуги</a></li>
+                        <li><a href="#about" class="footer-nav-link">О нас</a></li>
+                        <li><a href="#reviews" class="footer-nav-link">Отзывы</a></li>
+                        <li><a href="#contact" class="footer-nav-link">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <!-- Логотип по центру -->
+                <div class="footer-logo">
+                    <svg class="logo-svg footer-logo" width="120" height="40" viewBox="0 0 120 40">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#2563eb" />
+                                <stop offset="100%" stop-color="#3b82f6" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M10 20 C10 10 20 10 20 20 S30 30 30 20 S40 10 40 20 S50 30 50 20" 
+                              stroke="url(#logoGradient)" stroke-width="2" fill="none"/>
+                        <text x="60" y="25" font-family="Arial" font-size="12" font-weight="bold" fill="url(#logoGradient)">
+                            ИнФинIT
+                        </text>
+                    </svg>
+                    <p class="footer-tagline">Ваш успех начинается здесь</p>
+                </div>
+
+                <!-- Социальные сети справа -->
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="VKontakte">
+                        <i class="fab fa-vk"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Копирайт -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 ИнФинIT. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+
+</html>

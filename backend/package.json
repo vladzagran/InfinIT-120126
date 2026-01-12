@@ -1,0 +1,25 @@
+{
+    "name": "infinit-backend",
+    "version": "1.0.0",
+    "description": "Backend server with Telegram integration for InfinIT",
+    "main": "src/app.js",
+    "scripts": {
+        "start": "node src/app.js",
+        "dev": "nodemon src/app.js",
+        "test": "node test-telegram.html"
+    },
+    "dependencies": {
+        "express": "^4.18.2",
+        "cors": "^2.8.5",
+        "dotenv": "^16.3.1",
+        "node-telegram-bot-api": "^0.64.0",
+        "body-parser": "^1.20.2",
+        "path": "^0.12.7"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.1"
+    },
+    "keywords": ["nodejs", "express", "telegram", "bot"],
+    "author": "InfinIT",
+    "license": "MIT"
+}
